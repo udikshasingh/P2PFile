@@ -301,7 +301,12 @@ public class peerProcess implements MessageConstants
 					CommonProperties.pieceSize = Integer.parseInt(tokens[1]);
 				}
 			}
-
+			showLog(peerID + " has set Common Configurations: NumberOfPreferredNeighbors = " + CommonProperties.numOfPreferredNeighbr
+					 + ", UnchokingInterval = " + CommonProperties.unchokingInterval
+					 + ", OptimisticUnchokingInterval = " + CommonProperties.optUnchokingInterval
+					+	 ", FileName = " + CommonProperties.fileName
+					+ ", FileSize = " + CommonProperties.fileSize
+					+ ", PieceSize = " + CommonProperties.pieceSize);
 			in.close();
 		} catch (Exception ex) {
 			showLog(peerID + ex.toString());
